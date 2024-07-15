@@ -4,10 +4,10 @@
   },
   "name": "blogapp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon index.js"
+     "start":"npx nodemon app2.js"
 
   },
   "keywords": [],
