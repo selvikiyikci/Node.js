@@ -3,7 +3,7 @@ const app = express();
 
 app.use(function(req, res){
 
-    res.end("hello world");
+    res.end("anasayfa");
 
 });
 app.listen(3000, function(){
