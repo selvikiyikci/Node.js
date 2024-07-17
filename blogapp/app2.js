@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 app.use("/libs", express.static('node_modules'));
 app.use("/static", express.static('public'));
-app.use("/blog/:blogid", function (req, res) {
+app.use("/blogs/:blogid", function (req, res) {
     console.log(__dirname);
     console.log(__filename);
     res.send("blog detay sayfası");
@@ -12,7 +12,7 @@ app.use("/blog/:blogid", function (req, res) {
 
 });
 
-app.use("/blog", function (req, res) {
+app.use("/blogs", function (req, res) {
     res.sendFile(path.join(__dirname, "views/users", "blogs.html"));
 
 
@@ -21,7 +21,7 @@ app.use("/blog", function (req, res) {
 
 
 app.use("/", function (req, res, next) {
-    res.sendFile(path.join(__dirname, "views/users", "index.html"));
+    res.sendFile(path.join(__dirname, "views/users", "index2.html"));
 
 
 });
