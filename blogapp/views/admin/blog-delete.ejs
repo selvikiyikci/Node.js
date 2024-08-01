@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
+<head>
     <%- include("../partials/head")  %> 
 </head>
 <body>
@@ -15,7 +15,7 @@
                     <b><%= blog.baslik %> </b> <br> isimli blog kaydınız silmek istiyor musunuz?
                 </p>
                 <form method="post">
-                    <input type="hidden" name="blogid" value="<%= blog.blogid %>">
+                    <input type="hidden" name="blogid" value="<%= blog.id %>">
                     <button class="btn btn-danger" type="submit">Evet</button>
                     <a href="/admin/blogs" class="btn btn-primary">Vazgeç</a>
                 </form>

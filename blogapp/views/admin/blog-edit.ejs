@@ -26,6 +26,12 @@
                         </div>
                     </div>
                     <div class="row mb-3">
+                        <label for="altbaslik" class="col-sm-1 col-form-label">url</label>
+                        <div class="col-sm-11">
+                            <input type="text" class="form-control" id="url" name="url" value="<%= blog.url %>">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
                         <label for="aciklama" class="col-sm-1 col-form-label">Açıklama</label>
                         <div class="col-sm-11">
                             <textarea id="editor" name="aciklama" class="form-control" rows="10"><%= blog.aciklama %></textarea>
