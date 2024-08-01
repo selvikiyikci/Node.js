@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "btnGetProducts"> Ürünleri Getir </button>
+    <script>
+        const btnGetProducts = document.getElementById("btnGetProducts");
+
+        btnGetProducts.addEventListener("click", async() => {
+            const res = await fetch("http://127.0.0.1:3000/api/products ");
+            const urunler  = await res.json();
+            console.log(urunler);
+
+        });
+    </script>
+</body>
+</html>
