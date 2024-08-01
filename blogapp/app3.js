@@ -20,19 +20,13 @@ const dummyData = require("./data/dummy-data");
 const Category = require("./models/category");
 const Blog = require("./models/blog");
 
-// ilişkiler
-// one to many
-Blog.belongsToMany(Category, {through: "blogCategories"});
-Category.belongsToMany(Blog, {through: "blogCategories"});
+Blog.belongsToMany(Category, { through: "blogCategories"});
+Category.belongsToMany(Blog, { through: "blogCategories"});
 
-// uygulanması - sync
-
-// IIFE
 (async () => {
     await sequelize.sync({ force: true });
     await dummyData();
 })();
-
 
 app.listen(3000, function() {
     console.log("listening on port 3000");
